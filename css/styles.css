@@ -47,6 +47,7 @@ body {
 }
 /* phone styles > */
 .container {
+  width: 428px;
   padding-left: 16px;
   padding-right: 16px;
   margin-left: auto;
@@ -72,6 +73,8 @@ body {
 @media screen and (min-width: 768px) {
   .container {
     width: 720px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /* desktop styles > */
@@ -173,7 +176,7 @@ body {
   .menu-tablet {
     flex-wrap: wrap;
     gap: 12px;
-    padding-left: 120px;
+    margin-left: 120px;
   }
 }
 
@@ -187,6 +190,12 @@ body {
   font-style: normal;
   transition: color 250ms var(--timing-function);
 }
+@media screen and (max-width: 767px) {
+  .contact {
+    font-size: 12px;
+    line-height: 1.1;
+  }
+}
 .contact:hover,
 .contact:focus {
   color: var(--ocean-color);
@@ -195,6 +204,7 @@ body {
 /* Hero */
 .hero {
   background-size: cover;
+  max-width: 1440px;
   padding: 112px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -315,6 +325,7 @@ body {
   color: var(--navy-blue-color);
 }
 .text-description {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -348,8 +359,8 @@ body {
 }
 
 .logistics-title {
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
@@ -364,6 +375,13 @@ body {
 @media screen and (min-width: 1158px) {
   .logistics-ellement {
     width: calc((100% - 72px) / 4);
+  }
+  .logistics-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .text-description {
+    font-weight: 400;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
@@ -400,6 +418,7 @@ body {
 .work-list {
   display: flex;
   gap: 24px;
+  padding-bottom: 120px;
 }
 /* Team */
 .our-team {
@@ -416,15 +435,24 @@ body {
 .team-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 72px;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .team-list {
+    gap: 24px;
+    row-gap: 64px;
+  }
+  .team-img {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 .team-img {
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
   background-color: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .team-conteiner {
@@ -440,7 +468,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 24px;
-  padding-top: 8px;
+  margin-top: 8px;
 }
 .socials-item {
 }
@@ -465,7 +493,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   margin-left: 0;
   margin-right: 0;
@@ -481,11 +509,13 @@ body {
   color: var(--light-slate-color);
   transition: color 250ms var(--timing-function),
     border 2500ms var(--timing-function);
-  /* width: calc((100% - 16px) * 2 / 3); */
+  /* width: calc((100% - 16px) / 2); */
 }
 @media screen and (min-width: 768px) {
   .clients-list {
     gap: 24px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .clients-link {
     width: 168px;
@@ -563,7 +593,6 @@ body {
   }
 }
 .logo-light {
-  margin-bottom: 16px;
   color: var(--cloud-color);
 }
 .social-media {
@@ -745,6 +774,11 @@ body {
   flex-wrap: wrap;
   gap: 48px 24px;
 }
+@media screen and (min-width: 768px) and (max-width: 1157px) {
+  .portfolio-list {
+    gap: 72px 24px;
+  }
+}
 .portfolio-img-wrraper {
   position: relative;
   overflow: hidden;
@@ -817,6 +851,7 @@ body {
   transition: opacity 250ms var(--timing-function),
     visibility 250ms var(--timing-function);
 }
+
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -837,6 +872,11 @@ body {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
+@media screen and (max-width: 427px) {
+  .modal {
+    width: 90%;
+  }
 }
 .modal-close-btn {
   display: flex;
@@ -1075,4 +1115,9 @@ body {
 .socials-mobile-menu {
   display: flex;
   gap: 56px;
+}
+@media screen and (max-width: 427px) {
+  .socials-mobile-menu {
+    gap: 18px;
+  }
 }
